@@ -1,13 +1,107 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<!-- Add CSS at the head of HTML file -->
-    <link rel="stylesheet" href="./css/main.css">
-</head>
-<body>
-		<!-- Your code goes here-->
+<meta charset="UTF-8">
+<title>SOLVE</title>
+<link rel="stylesheet" href="css/transformer.css" />
+<script>
+var simsubscreennum=0;
+var temp=0;
 
-	<!-- Add JS at the bottom of HTML file --> 
-        <script src="./js/main.js"></script>
+
+</script>
+</head>
+
+<body style="margin:0; font-family:verdana;">
+<div id="simscreen">
+<div id="title"><h5>Development of 11KV/433 volts substation automation using PLC for timer ON/OFF load control</h5></div>
+
+<div class="simsubscreen" id="canvas0">
+	<!-- <img src="images/main.png" id="main" class="responsive" style="position: absolute; left: 100px; top: 10px;width: 850px;z-index: 0"/> -->
+	<canvas id="canvas" style="position: absolute;z-index: 150;left: 50px;top:40px; " width="900" height="520"></canvas>
+	<canvas id="canvas1" style="position: absolute;z-index: 152;left: 50px;top:40px; " width="900" height="520"></canvas>
+	<img src="./images/swOpen.png" id="d1" style="position: absolute;left: 100px;top: 335px;height: 20px;z-index: 160;cursor: pointer;" onclick="switchToggle(this)">
+	<img src="./images/swOpen.png" id="d2" style="position: absolute;left: 212px;top: 335px;height: 20px;z-index: 160;cursor: pointer;" onclick="switchToggle(this)">
+	<img src="./images/swOpen.png" id="d3" style="position: absolute;left: 326px;top: 335px;height: 20px;z-index: 160;cursor: pointer;" onclick="switchToggle(this)">
+	<img src="./images/swOpen.png" id="d4" style="position: absolute;left: 440px;top: 335px;height: 20px;z-index: 160;cursor: pointer;" onclick="switchToggle(this)">
+	<img src="./images/swOpen.png" id="d5" style="position: absolute;left: 646px;top: 335px;height: 20px;z-index: 160;cursor: pointer;" onclick="switchToggle(this)">
+	<img src="./images/swOpen.png" id="d6" style="position: absolute;left: 756px;top: 335px;height: 20px;z-index: 160;cursor: pointer;" onclick="switchToggle(this)">
+	<img src="./images/swOpen.png" id="d7" style="position: absolute;left: 870px;top: 335px;height: 20px;z-index: 160;cursor: pointer;" onclick="switchToggle(this)">
+	<img src="./images/swOpen.png" id="u1" style="position: absolute;left: 124px;top: 227px;height: 20px;z-index: 160;cursor: pointer;" onclick="switchToggle(this)">
+	<img src="./images/swOpen.png" id="u2" style="position: absolute;left: 387px;top: 227px;height: 20px;z-index: 160;cursor: pointer;" onclick="switchToggle(this)">
+	<img src="./images/swOpen.png" id="u3" style="position: absolute;left: 756px;top: 227px;height: 20px;z-index: 160;cursor: pointer;" onclick="switchToggle(this)">
+	<img src="./images/slantOpen.png" id="slant" style="position: absolute;left: 542px;top: 294px;width: 20px;z-index: 160;cursor: pointer;" onclick="switchToggle(this)">
+</div>
+<!-- Upper Part -->
+<!-- Incomer Comments-->
+	<p class="tooltipContent" style="position: absolute;left: 85px;top: 75px;padding-bottom: 20px;width: auto; opacity: 0;" onmouseover="toggleTip(this)" onmouseout="toggleTip(this)">KEB 315V, 3ph+N, 50Hz, AC Supply</p>
+	<p class="tooltipContent" style="position: absolute;left: 345px;top: 75px;padding-bottom: 20px;width: auto; opacity: 0;" onmouseover="toggleTip(this)" onmouseout="toggleTip(this)">KEB 315V, 3ph+N, 50Hz, AC Supply</p>
+	<p class="tooltipContent" style="position: absolute;left: 711px;top: 75px;padding-bottom: 20px;width: auto; opacity: 0;" onmouseover="toggleTip(this)" onmouseout="toggleTip(this)">KEB 315V, 3ph+N, 50Hz, AC Supply</p>
+
+<!-- CT1 -->
+	<p class="tooltipContent" style="position: absolute;left: 59px;top: 160px;padding-bottom: 20px; opacity: 0;" onmouseover="toggleTip(this)" onmouseout="toggleTip(this)"> <span>2500/5A</span><span>CL-1,10VA</span></p>
+	<p class="tooltipContent" style="position: absolute;left: 320px;top: 160px;padding-bottom: 20px;opacity: 0;" onmouseover="toggleTip(this)" onmouseout="toggleTip(this)"> <span>2500/5A</span><span>CL-1,10VA</span></p>
+	<p class="tooltipContent" style="position: absolute;left: 691px;top: 160px;padding-bottom: 20px;opacity: 0;" onmouseover="toggleTip(this)" onmouseout="toggleTip(this)"> <span>2500/5A</span><span>CL-1,10VA</span></p>
+
+
+<!-- MPCB -->
+	<p class="tooltipContent" style="position: absolute;left: 130px;top: 120px;padding-bottom: 20px; opacity: 0;" onmouseover="toggleTip(this)" onmouseout="toggleTip(this)"> <span>4-6</span><span>3-A,3P</span></p>
+	<p class="tooltipContent" style="position: absolute;left: 393px;top: 120px;padding-bottom: 20px;opacity: 0;" onmouseover="toggleTip(this)" onmouseout="toggleTip(this)"> <span>4-6</span><span>3-A,3P</span></p>
+	<p class="tooltipContent" style="position: absolute;left: 765px;top: 120px;padding-bottom: 20px;opacity: 0;" onmouseover="toggleTip(this)" onmouseout="toggleTip(this)"><span>4-6</span><span>3-A,3P</span></p>
+
+<!-- PT -->
+	<p class="tooltipContent" style="position: absolute;left: 155px;top: 96px;padding-bottom: 20px; opacity: 0;" onmouseover="toggleTip(this)" onmouseout="toggleTip(this)"> <span>415V/110V</span><span>3phase</span><span>30VA</span></p>
+	<p class="tooltipContent" style="position: absolute;left: 418px;top: 96px;padding-bottom: 20px;opacity: 0;" onmouseover="toggleTip(this)" onmouseout="toggleTip(this)"><span>415V/110V</span><span>3phase</span><span>30VA</span></p>
+	<p class="tooltipContent" style="position: absolute;left: 793px;top: 96px;padding-bottom: 20px;opacity: 0;" onmouseover="toggleTip(this)" onmouseout="toggleTip(this)"><span>415V/110V</span><span>3phase</span><span>30VA</span></p>
+
+
+<!-- RCBO -->
+	<p class="tooltipContent" style="position: absolute;left: 195px;top: 105px;padding-bottom: 20px; opacity: 0;" onmouseover="toggleTip(this)" onmouseout="toggleTip(this)"> <span>4P</span><span>25A</span><span>30mA</span></p>
+	<p class="tooltipContent" style="position: absolute;left: 460px;top: 105px;padding-bottom: 20px;opacity: 0;" onmouseover="toggleTip(this)" onmouseout="toggleTip(this)"><span>4P</span><span>25A</span><span>30mA</span></p>
+	<p class="tooltipContent" style="position: absolute;left: 830px;top: 105px;padding-bottom: 20px;opacity: 0;" onmouseover="toggleTip(this)" onmouseout="toggleTip(this)"><span>4P</span><span>25A</span><span>30mA</span></p>
+
+
+<!-- Middle -->
+<!-- ACB -->
+	<p class="tooltipContent" style="position: absolute;left: 55px;top: 265px;padding-bottom: 20px; opacity: 0;" onmouseover="toggleTip(this)" onmouseout="toggleTip(this)"> <span>2500A, 3P</span></p>
+	<p class="tooltipContent" style="position: absolute;left: 320px;top: 265px;padding-bottom: 20px;opacity: 0;" onmouseover="toggleTip(this)" onmouseout="toggleTip(this)"><span>2500A, 4P</span></p>
+	<p class="tooltipContent" style="position: absolute;left: 700px;top: 265px;padding-bottom: 20px;opacity: 0;" onmouseover="toggleTip(this)" onmouseout="toggleTip(this)"><span>2500A, 4P</span></p>
+	<p class="tooltipContent" style="position: absolute;left: 480px;top: 310px;padding-bottom: 20px;opacity: 0;" onmouseover="toggleTip(this)" onmouseout="toggleTip(this)"><span>2500A, 4P</span></p>
+
+<!-- DOwN -->
+<!-- MCCB -->
+
+<p class="tooltipContent" style="position: absolute;left: 35px;top: 355px;padding-bottom: 20px; opacity: 0;" onmouseover="toggleTip(this)" onmouseout="toggleTip(this)"> <span>400A, 3P</span></p>
+<p class="tooltipContent" style="position: absolute;left: 160px;top: 355px;padding-bottom: 20px;opacity: 0;" onmouseover="toggleTip(this)" onmouseout="toggleTip(this)"> <span>400A, 3P</span></p>
+<p class="tooltipContent" style="position: absolute;left: 270px;top: 355px;padding-bottom: 20px;opacity: 0;" onmouseover="toggleTip(this)" onmouseout="toggleTip(this)"> <span>400A, 3P</span></p>
+<p class="tooltipContent" style="position: absolute;left: 390px;top: 355px;padding-bottom: 20px;opacity: 0;" onmouseover="toggleTip(this)" onmouseout="toggleTip(this)"> <span>400A, 3P</span></p>
+<p class="tooltipContent" style="position: absolute;left: 580px;top: 355px;padding-bottom: 20px;opacity: 0;" onmouseover="toggleTip(this)" onmouseout="toggleTip(this)"> <span>400A, 3P</span></p>
+<p class="tooltipContent" style="position: absolute;left: 700px;top: 355px;padding-bottom: 20px;opacity: 0;" onmouseover="toggleTip(this)" onmouseout="toggleTip(this)"> <span>400A, 3P</span></p>
+<p class="tooltipContent" style="position: absolute;left: 820px;top: 355px;padding-bottom: 20px;opacity: 0;" onmouseover="toggleTip(this)" onmouseout="toggleTip(this)"> <span>400A, 3P</span></p>
+
+<!-- CT1 -->
+<p class="tooltipContent" style="position: absolute;left: 35px;top: 420px;padding-bottom: 20px; opacity: 0;" onmouseover="toggleTip(this)" onmouseout="toggleTip(this)"> <span>400/5A</span><span>CL-1,10V</span></p>
+<p class="tooltipContent" style="position: absolute;left: 156px;top: 420px;padding-bottom: 20px;opacity: 0;" onmouseover="toggleTip(this)" onmouseout="toggleTip(this)"> <span>400/5A</span><span>CL-1,10V</span></p>
+<p class="tooltipContent" style="position: absolute;left: 270px;top: 420px;padding-bottom: 20px;opacity: 0;" onmouseover="toggleTip(this)" onmouseout="toggleTip(this)"> <span>400/5A</span><span>CL-1,10V</span></p>
+<p class="tooltipContent" style="position: absolute;left: 385px;top: 420px;padding-bottom: 20px;opacity: 0;" onmouseover="toggleTip(this)" onmouseout="toggleTip(this)"> <span>400/5A</span><span>CL-1,10V</span></p>
+<p class="tooltipContent" style="position: absolute;left: 580px;top: 420px;padding-bottom: 20px;opacity: 0;" onmouseover="toggleTip(this)" onmouseout="toggleTip(this)"> <span>400/5A</span><span>CL-1,10V</span></p>
+<p class="tooltipContent" style="position: absolute;left: 700px;top: 420px;padding-bottom: 20px;opacity: 0;" onmouseover="toggleTip(this)" onmouseout="toggleTip(this)"> <span>400/5A</span><span>CL-1,10V</span></p>
+<p class="tooltipContent" style="position: absolute;left: 815px;top: 420px;padding-bottom: 20px;opacity: 0;" onmouseover="toggleTip(this)" onmouseout="toggleTip(this)"> <span>400/5A</span><span>CL-1,10V</span></p>
+
+
+<p id="timerLoad1" style="position: absolute;left: 135px;top:518px;z-index: 154;color: goldenrod"></p>
+<p id="timerLoad1Text" style="position: absolute;left: 65px;top:570px;z-index: 154; font-size: 14px;color:green"></p>
+<p id="timerLoad2" style="position: absolute;left: 250px;top:518px;z-index: 154;color: goldenrod"></p>
+<p id="timerLoad2Text" style="position: absolute;left: 185px;top:570px;z-index: 154;font-size: 14px;color:green"></p>
+<p id="timerLoad3" style="position: absolute;left: 365px;top:518px;z-index: 154;color: goldenrod"></p>
+<p id="timerLoad3Text" style="position: absolute;left: 305px;top:570px;z-index: 154;font-size: 14px;color:green"></p>
+<p id="timerLoad4" style="position: absolute;left: 480px;top:518px;z-index: 154;color: goldenrod"></p>
+<p id="timerLoad4Text" style="position: absolute;left: 415px;top:570px;z-index: 154;font-size: 14px;color:green"></p>
+
+ 
+<div id="copyright"> &copy;<script>document.write(new Date().getFullYear())</script> SOLVE - The Virtual Lab @ NITK Surathkal</div>
+</div>
+<script type="text/javascript" src="js/transformer.js"></script>
+
 </body>
 </html>

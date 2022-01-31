@@ -2,38 +2,340 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "The maximum generated voltage in power generating stations in advanced countries is 33kV while that in India is _________",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "6kV",
+        "b": "9kV",
+        "c": "11kV",
+        "d": "44kV"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "This is a Sample Question 2?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
       },
       "correctAnswer": "c",
-      "difficulty": "beginner"
+      "difficulty": ""
+    },
+    {
+      "question": "The transmission lines and feeders are _____________",
+      "answers": {
+        "a": "2-phase 2-wire circuits",
+        "b": "3-phase 3-wire circuit",
+        "c": "3-phase 3-wire circuits",
+        "d": "None of them"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "b",
+      "difficulty": ""
+    },
+    {
+      "question": "The transmission lines are _____________",
+      "answers": {
+        "a": "3-phase 4-wire circuits",
+        "b": "2-phase 2-wire circuits",
+        "c": "3-phase 3-wire circuits",
+        "d": "None of them"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "a",
+      "difficulty": ""
+    },
+    {
+      "question": "Copper conductor is _____________",
+      "answers": {
+        "a": "Homogenous material",
+        "b": "Highly durable and has high scrap value",
+        "c": "It has high current density, so lesser X-sectional area of conductor is required",
+        "d": "All"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "d",
+      "difficulty": ""
+    },
+    {
+      "question": "The sag in aluminium conductors is __________ the copper conductors.",
+      "answers": {
+        "a": "Lesser than",
+        "b": "Equal to",
+        "c": "Greater than",
+        "d": "2 times lesser than"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "c",
+      "difficulty": ""
+    },
+    {
+      "question": "Choose the proper set of increases order of mechanical strength of the following line supports :",
+      "answers": {
+        "a": "Wooden poles > steel poles > steel towers > R.C.C poles",
+        "b": "Wooden poles > steel towers > steel poles > R.C.C poles",
+        "c": "Wooden poles > steel poles >R.C.C poles > steel towers",
+        "d": "Wooden poles > R.C.C poles >steel poles > steel towers"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "c",
+      "difficulty": ""
+    },
+    {
+      "question": "A good porcelain insulator has compressive strength of about _________ and dielectric strength of _________ of its thickness.",
+      "answers": {
+        "a": "70 N/m<sup>2</sup> , 6kV/cm",
+        "b": "700 N/m<sup>2</sup> , 6kV/cm",
+        "c": "7000 N/m<sup>2</sup> , 6kV/cm",
+        "d": "7000 N/m<sup>2</sup> , 60kV/cm"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "d",
+      "difficulty": ""
+    },
+    {
+      "question": "Steatite is produced by mixing ___________ with small proton of ________ and ___________.",
+      "answers": {
+        "a": "Hydrated magnesium silicate,carbon,nitrogen",
+        "b": "Hydrated magnesium silicate,carbon,clay",
+        "c": "Hydrated magnesium silicate,nitrogen,clay",
+        "d": "Hydrated magnesium silicate, clay, feldspar"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "d",
+      "difficulty": ""
+    },
+    {
+      "question": "Development of 11KV/433 volts substation automation scheme using PLC for cyclic ON/OFF load control schemes",
+      "answers": {
+        "a": "Weight of the conductor",
+        "b": "Span length",
+        "c": "Temperature",
+        "d": "All"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "d",
+      "difficulty": ""
+    },
+    {
+      "question": "The skin effect is negligible when the supply frequency is ________ and the conductor diameter is _________.",
+      "answers": {
+        "a": "High, Large",
+        "b": "High, Small",
+        "c": "Low ,Small",
+        "d": "Low ,Large"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "c",
+      "difficulty": ""
+    },
+    {
+      "question": "The factor which effect skin and proximity effects are ___________",
+      "answers": {
+        "a": "Frequency of the current",
+        "b": "Permeability of the conductor material",
+        "c": "Size of the conductor and distance between the conductors",
+        "d": "All"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "d",
+      "difficulty": ""
+    },
+    {
+      "question": "In medium transmission lines ________",
+      "answers": {
+        "a": "Length is between 50 km and 160km",
+        "b": "Operating voltage is between 21kV and 100kV",
+        "c": "Both length is between 50 km and 160km and operating voltage is between 21kV and 100kV",
+        "d": "None of them"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "c",
+      "difficulty": ""
+    },
+    {
+      "question": "_______ is the r.m.s value of current which the Circuit breaker is capable of carrying continuously at its rated frequency under specified conditions.",
+      "answers": {
+        "a": "Breaking capacity",
+        "b": "Making capacity",
+        "c": "Short-time capacity",
+        "d": "None of them"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "d",
+      "difficulty": ""
+    },
+    {
+      "question": "Functions of switchgear are ________",
+      "answers": {
+        "a": "To localize the effects of faults by operation of protective equipment and so automatically disconnect faulty point from the system",
+        "b": "To break efficiently the short circuits without giving rise to dangerous conditions",
+        "c": "To facilitate the redistribution of local, inspection and maintenance on the system",
+        "d": "All"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "d",
+      "difficulty": ""
+    },
+    {
+      "question": "Timers are __________",
+      "answers": {
+        "a": "Used to delay an action",
+        "b": "Used to run an operation for a predetermined period of time",
+        "c": "Used to record the total accumulated time of continuous or inter-mediate events",
+        "d": "All"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "d",
+      "difficulty": ""
+    },
+    {
+      "question": "In word zero, of timer element, bit 13, is the _______",
+      "answers": {
+        "a": "Timer-timing bit",
+        "b": "Timer-enable bit",
+        "c": "Timer-done bit",
+        "d": "None"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "c",
+      "difficulty": ""
+    },
+    {
+      "question": "In an on-delay timer, the enable bit will be true when the timer-timing bit is true. Timer enable bit will be set through the transition from the timer-timing bit to the timer-done bit. Timer enable bit is set as long as there is logical continuity through all input instruction to the timer instruction, no matter the relationship between the preset value and accumulated value.",
+      "answers": {
+        "a": "The above statement is true",
+        "b": "The above statement is true in most of the cases",
+        "c": "The above statement is false",
+        "d": "None"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "a",
+      "difficulty": ""
+    },
+    {
+      "question": "In timer element, word 0 is for ________",
+      "answers": {
+        "a": "Preset value",
+        "b": "Accumulated value",
+        "c": "Status bits",
+        "d": "None"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "c",
+      "difficulty": ""
+    },
+    {
+      "question": "In timer file 11, timer 6's timer enable bit is addressed as _______",
+      "answers": {
+        "a": "T6:11/EN",
+        "b": "T6:11.EN",
+        "c": "T11:6.EN",
+        "d": "T11:6/EN"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "d",
+      "difficulty": ""
+    },
+    {
+      "question": "___________ instruction is used to program a time delay to begin after rung input goes false.",
+      "answers": {
+        "a": "On-delay timer",
+        "b": "Off-delay timer"
+      },
+      "explanations": {
+        "a": "",
+        "b": ""
+      },
+      "correctAnswer": "b",
+      "difficulty": ""
     }
   ]
 }
