@@ -2,38 +2,330 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "The main function of substations are",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "To receive energy transmitted at high voltage from the generating stations",
+        "b": "To decrease the voltage to a value appropriate for local distribution",
+        "c": "To provide switching facilities",
+        "d": "All"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
       },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
+      "correctAnswer": "d",
+      "difficulty": ""
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "The important characteristics of the fluid used in Circuit Breaker are :-",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "It should have good thermal and chemical stability",
+        "b": "It should have high dielectric strength and are extinguishing ability",
+        "c": "Non- inflammability and high thermal conductivity",
+        "d": "All"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "d",
+      "difficulty": ""
+    },
+    {
+      "question": "The advantage of using oil in Oil Circuit Breaker as an arc quenching medium is:",
+      "answers": {
+        "a": "It has high dielectric strength",
+        "b": "As a result of decomposition of oil, it has good cooling property",
+        "c": "It has high dielectric strength and as a result of decomposition of oil, it has good cooling property",
+        "d": "Highly inflammable"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
       },
       "correctAnswer": "c",
-      "difficulty": "beginner"
+      "difficulty": ""
+    },
+    {
+      "question": "Instrument Transformer are used because",
+      "answers": {
+        "a": "It is cheap",
+        "b": "It provides more safety",
+        "c": "It is not practicable to connect instruments and meters directly to the lines in high voltage circuits",
+        "d": "Both it provides more safety and it is not practicable to connect instruments and meters directly to the lines in high voltage circuits"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "d",
+      "difficulty": ""
+    },
+    {
+      "question": "A potential transformer is a",
+      "answers": {
+        "a": "Step up transformer",
+        "b": "Step down transformer",
+        "c": "Both Step up transformer and Step down transformer",
+        "d": "None"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "c",
+      "difficulty": ""
+    },
+    {
+      "question": "Big porcelain bushing, hollow insulators can be used up to _______ kV.",
+      "answers": {
+        "a": "200 kV",
+        "b": "400 kV",
+        "c": "1000 kV",
+        "d": "3000 kV"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "c",
+      "difficulty": ""
+    },
+    {
+      "question": "The use of ________ for high voltage applications is becoming more common.",
+      "answers": {
+        "a": "Oil",
+        "b": "Porcelain",
+        "c": "Polymer",
+        "d": "All"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "c",
+      "difficulty": ""
+    },
+    {
+      "question": "DC supply __________ be used for the transformer.",
+      "answers": {
+        "a": "Can",
+        "b": "Connect",
+        "c": "Both Can and Connect",
+        "d": "None"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "b",
+      "difficulty": ""
+    },
+    {
+      "question": "The ratio of secondary induced emf to primary induced emf is known as ___________",
+      "answers": {
+        "a": "Voltage transform ratio",
+        "b": "Current ratio",
+        "c": "Power ratio",
+        "d": "All"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "a",
+      "difficulty": ""
+    },
+    {
+      "question": "The transmission voltage in India are _________ .",
+      "answers": {
+        "a": "400 kv",
+        "b": "200 kV",
+        "c": "132 kV",
+        "d": "All"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "d",
+      "difficulty": ""
+    },
+    {
+      "question": "Transmission network is commonly known as __________",
+      "answers": {
+        "a": "Pan",
+        "b": "Lock-head",
+        "c": "Grid",
+        "d": "All"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "c",
+      "difficulty": ""
+    },
+    {
+      "question": "_________ is one of the best conductors due to its high electrical conductivity and high tensile strength for all type of transmission.",
+      "answers": {
+        "a": "Phosphor brown materials",
+        "b": "Galvanised iron",
+        "c": "Aluminium",
+        "d": "Copper"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "d",
+      "difficulty": ""
+    },
+    {
+      "question": "Aluminium has _______ the resistivity of copper.",
+      "answers": {
+        "a": "12 times",
+        "b": "24 times",
+        "c": "3 times",
+        "d": "16 times"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "d",
+      "difficulty": ""
+    },
+    {
+      "question": "When 1 or 2 percentage of cadmium is added to copper it __________ the tensile strength by ________ but ________ the conductivity by ________.",
+      "answers": {
+        "a": "Decreases, 40% , Increases, 20%",
+        "b": "Decreases, 20% , Increases, 40%",
+        "c": "Increases, 40% , decreases, 17%",
+        "d": "Increases, 17% , decreases, 40%"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "c",
+      "difficulty": ""
+    },
+    {
+      "question": "In double bus-bar system ,there is a provision of a bus-bar coupling switch for transferring operation from one bus-bar to another _________ .",
+      "answers": {
+        "a": "True",
+        "b": "False"
+      },
+      "explanations": {
+        "a": "",
+        "b": ""
+      },
+      "correctAnswer": "a",
+      "difficulty": ""
+    },
+    {
+      "question": "Timers are output instructions that are internal to the programmable logic controller.",
+      "answers": {
+        "a": "The above statement is true",
+        "b": "The above statement is false"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "a",
+      "difficulty": ""
+    },
+    {
+      "question": "In word zero, of timer element, bit 15, is the _______",
+      "answers": {
+        "a": "Timer-timing bit",
+        "b": "Timer-enable bit",
+        "c": "Timer-done bit"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": ""
+      },
+      "correctAnswer": "b",
+      "difficulty": ""
+    },
+    {
+      "question": "An on-delay timer is not retentive in nature.",
+      "answers": {
+        "a": "The above statement is false",
+        "b": "The above statement is true"
+      },
+      "explanations": {
+        "a": "",
+        "b": ""
+      },
+      "correctAnswer": "b",
+      "difficulty": ""
+    },
+    {
+      "question": "In timer element, word zero is for _______",
+      "answers": {
+        "a": "Preset value",
+        "b": "Accumulated value",
+        "c": "Status bits"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": ""
+      },
+      "correctAnswer": "a",
+      "difficulty": ""
+    },
+    {
+      "question": "In a default timer file, timer 3�s done bit is addressed as ________ .",
+      "answers": {
+        "a": "T3:4.DN",
+        "b": "T3:4/DN",
+        "c": "T4:3.DN",
+        "d": "T4:3/DN"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "d",
+      "difficulty": ""
     }
   ]
 }
