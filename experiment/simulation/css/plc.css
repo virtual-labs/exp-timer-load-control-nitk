@@ -1,0 +1,560 @@
+:root {
+  --clr-title-background: #089b93;
+  --clr-title-background2: rgb(8, 195, 185);
+  --clr-title-background3: rgb(65, 116, 114);
+  --clr-text-clr: #ffffff;
+  --clr-container-clr: #9fdeff;
+  --clr-body-clr: #ebe7e7;
+  --clr-side-background2: rgb(28, 138, 138);
+  /* --clr-side-background3: rgb(46, 48, 48); */
+  --clr-side-background3: rgb(75, 77, 77);
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  line-height: 1.6;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  /* gap: 0.5rem; */
+  border: 0.1rem solid var(--clr-title-background);
+  max-width: 90rem;
+  width: 100%;
+  /* overflow-x: hidden; */
+  margin: 0 auto;
+}
+
+.title {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  background-image: linear-gradient(
+    to bottom,
+    var(--clr-side-background2),
+    var(--clr-side-background3)
+  );
+  color: var(--clr-text-clr);
+  font-family: verdana;
+  text-transform: uppercase;
+}
+.logo {
+  width: 5rem;
+  height: auto;
+  display: inline-block;
+  justify-self: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+.sim-container {
+  position: relative;
+  height: 80vh;
+}
+.canvas {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 150;
+}
+/* #canvas1 {
+  z-index: 160;
+} */
+
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: inherit;
+  font-weight: 500;
+  font-size: 1.2rem;
+  background-image: linear-gradient(
+    to bottom,
+    var(--clr-side-background2),
+    var(--clr-side-background3)
+  );
+  color: var(--clr-text-clr);
+}
+
+/* remaining css */
+.u1 {
+  position: absolute;
+  left: 8.5%;
+  top: 37.4%;
+  width: 2%;
+  height: 4%;
+  z-index: 160;
+  cursor: pointer;
+}
+
+.u2 {
+  position: absolute;
+  left: 38%;
+  top: 37%;
+  width: 2%;
+
+  height: 4%;
+  z-index: 160;
+  cursor: pointer;
+}
+
+.u3 {
+  position: absolute;
+  left: 79.8%;
+  top: 37.5%;
+  width: 2%;
+
+  height: 4%;
+  z-index: 160;
+  cursor: pointer;
+}
+
+.slant {
+  position: absolute;
+  left: 54.5%;
+  top: 51%;
+  width: 3%;
+  height: 2%;
+  z-index: 160;
+  cursor: pointer;
+}
+
+.d1 {
+  position: absolute;
+  left: 5.7%;
+  top: 58.6%;
+  width: 2%;
+  height: 4%;
+  z-index: 160;
+  cursor: pointer;
+}
+
+.d2 {
+  position: absolute;
+  left: 18.4%;
+  top: 58.9%;
+  width: 2%;
+  height: 4%;
+  z-index: 160;
+  cursor: pointer;
+}
+.d3 {
+  position: absolute;
+  left: 31.2%;
+  top: 58.6%;
+  width: 2%;
+  height: 4%;
+  z-index: 160;
+  cursor: pointer;
+}
+.d4 {
+  position: absolute;
+  left: 44.1%;
+  top: 58.6%;
+  width: 2%;
+  height: 4%;
+  z-index: 160;
+  cursor: pointer;
+}
+.d5 {
+  position: absolute;
+  left: 67.4%;
+  top: 58.6%;
+  width: 2%;
+  height: 4%;
+  z-index: 160;
+  cursor: pointer;
+}
+.d6 {
+  position: absolute;
+  left: 79.7%;
+  top: 58.6%;
+  width: 2%;
+  height: 4%;
+  z-index: 160;
+  cursor: pointer;
+}
+.d7 {
+  position: absolute;
+  left: 92.6%;
+  top: 58.6%;
+  width: 2%;
+  height: 4%;
+  z-index: 160;
+  cursor: pointer;
+}
+
+.keb1 {
+  position: absolute;
+  left: 2%;
+  top: 0%;
+  width: auto;
+  opacity: 0;
+  padding-bottom: 1.5rem;
+}
+.keb2 {
+  position: absolute;
+  left: 30%;
+  top: 0%;
+  width: auto;
+  opacity: 0;
+  padding-bottom: 1.5rem;
+}
+.keb3 {
+  position: absolute;
+  left: 71%;
+  top: 0%;
+  width: auto;
+  opacity: 0;
+  padding-bottom: 1.5rem;
+}
+
+.uct1 {
+  position: absolute;
+  left: 1%;
+  top: 20%;
+  opacity: 0;
+  padding-bottom: 1.5rem;
+}
+.uct2 {
+  position: absolute;
+  left: 33%;
+  top: 20%;
+  opacity: 0;
+  padding-bottom: 1.5rem;
+}
+.uct3 {
+  position: absolute;
+  left: 71%;
+  top: 20%;
+  opacity: 0;
+  padding-bottom: 1.5rem;
+}
+
+.umpcb1 {
+  position: absolute;
+  left: 7%;
+  top: 11%;
+  opacity: 0;
+  padding-bottom: 1.5rem;
+}
+.umpcb2 {
+  position: absolute;
+  left: 36%;
+  top: 11%;
+  opacity: 0;
+  padding-bottom: 1.5rem;
+}
+.umpcb3 {
+  position: absolute;
+  left: 77%;
+  top: 11%;
+  opacity: 0;
+  padding-bottom: 1.5rem;
+}
+.upt1 {
+  position: absolute;
+  left: 9%;
+  top: 10%;
+  opacity: 0;
+  padding-bottom: 1.5rem;
+}
+.upt2 {
+  position: absolute;
+  left: 40%;
+  top: 10%;
+  opacity: 0;
+  padding-bottom: 1.5rem;
+}
+.upt3 {
+  position: absolute;
+  left: 82%;
+  top: 10%;
+  opacity: 0;
+  padding-bottom: 1.5rem;
+}
+.urcbo1 {
+  position: absolute;
+  left: 16%;
+  top: 12%;
+  opacity: 0;
+  padding-bottom: 1.5rem;
+}
+.urcbo2 {
+  position: absolute;
+  left: 45%;
+  top: 12%;
+  opacity: 0;
+  padding-bottom: 1.5rem;
+}
+.urcbo3 {
+  position: absolute;
+  left: 87%;
+  top: 12%;
+  opacity: 0;
+  padding-bottom: 1.5rem;
+}
+
+.macb1 {
+  position: absolute;
+  left: 4%;
+  top: 39%;
+  opacity: 0;
+  padding-bottom: 1.5rem;
+}
+.macb2 {
+  position: absolute;
+  left: 35%;
+  top: 39%;
+  opacity: 0;
+  padding-bottom: 1.5rem;
+}
+.macb3 {
+  position: absolute;
+  left: 76%;
+  top: 39%;
+  opacity: 0;
+  padding-bottom: 1.5rem;
+}
+.macb4 {
+  position: absolute;
+  left: 47%;
+  top: 46%;
+  opacity: 0;
+  padding-bottom: 1.5rem;
+}
+
+.dmccb1 {
+  position: absolute;
+  left: 0%;
+  top: 56%;
+  opacity: 0;
+  padding-bottom: 1.5rem;
+}
+.dmccb2 {
+  position: absolute;
+  left: 12%;
+  top: 56%;
+  opacity: 0;
+  padding-bottom: 1.5rem;
+}
+.dmccb3 {
+  position: absolute;
+  left: 24%;
+  top: 56%;
+  opacity: 0;
+  padding-bottom: 1.5rem;
+}
+.dmccb4 {
+  position: absolute;
+  left: 36%;
+  top: 56%;
+  opacity: 0;
+  padding-bottom: 1.5rem;
+}
+.dmccb5 {
+  position: absolute;
+  left: 60%;
+  top: 56%;
+  opacity: 0;
+  padding-bottom: 1.5rem;
+}
+.dmccb6 {
+  position: absolute;
+  left: 74%;
+  top: 56%;
+  opacity: 0;
+  padding-bottom: 1.5rem;
+}
+.dmccb7 {
+  position: absolute;
+  left: 86%;
+  top: 56%;
+  opacity: 0;
+  padding-bottom: 1.5rem;
+}
+.dct1 {
+  position: absolute;
+  left: 1%;
+  top: 71%;
+  opacity: 0;
+  padding-bottom: 1.5rem;
+}
+.dct2 {
+  position: absolute;
+  left: 12%;
+  top: 71%;
+  opacity: 0;
+  padding-bottom: 1.5rem;
+}
+.dct3 {
+  position: absolute;
+  left: 26%;
+  top: 71%;
+  opacity: 0;
+  padding-bottom: 1.5rem;
+}
+.dct4 {
+  position: absolute;
+  left: 39%;
+  top: 71%;
+  opacity: 0;
+  padding-bottom: 1.5rem;
+}
+.dct5 {
+  position: absolute;
+  left: 58%;
+  top: 71%;
+  opacity: 0;
+  padding-bottom: 1.5rem;
+}
+.dct6 {
+  position: absolute;
+  left: 74%;
+  top: 71%;
+  opacity: 0;
+  padding-bottom: 1.5rem;
+}
+.dct7 {
+  position: absolute;
+  left: 87%;
+  top: 71%;
+  opacity: 0;
+  padding-bottom: 1.5rem;
+}
+
+.tooltipContent {
+  font-size: 12px;
+  color: rgb(214, 241, 58);
+  z-index: 154;
+  /* background-color: aliceblue; */
+  cursor: pointer;
+}
+.timerLoad1 {
+  font-size: 1.6rem;
+  position: absolute;
+  left: 9%;
+  top: 87%;
+  z-index: 154;
+  color: goldenrod;
+}
+
+.timerLoad1Text {
+  position: absolute;
+  left: 1.5%;
+  top: 99%;
+  z-index: 154;
+  font-size: 14px;
+  color: red;
+}
+.timerLoad2 {
+  font-size: 1.6rem;
+  position: absolute;
+  left: 23%;
+  top: 87%;
+  z-index: 154;
+  color: goldenrod;
+}
+
+.timerLoad2Text {
+  position: absolute;
+  left: 16%;
+  top: 99%;
+  z-index: 154;
+  font-size: 14px;
+  color: red;
+}
+.timerLoad3 {
+  font-size: 1.6rem;
+  position: absolute;
+  left: 35%;
+  top: 87%;
+  z-index: 154;
+  color: goldenrod;
+}
+
+.timerLoad3Text {
+  position: absolute;
+  left: 29%;
+  top: 99%;
+  z-index: 154;
+  font-size: 14px;
+  color: red;
+}
+.timerLoad4 {
+  font-size: 1.6rem;
+  position: absolute;
+  left: 47%;
+  top: 87%;
+  z-index: 154;
+  color: goldenrod;
+}
+
+.timerLoad4Text {
+  position: absolute;
+  left: 40%;
+  top: 99%;
+  z-index: 154;
+  font-size: 14px;
+  color: red;
+}
+.timer-div {
+  padding: 1rem;
+  background-color: black;
+  width: 100%;
+  height: 5%;
+}
+@media (max-width: 40em) {
+  .container {
+    margin: 0;
+    overflow-x: hidden;
+  }
+  h1 {
+    font-size: 1.2rem;
+  }
+  .timerLoad1,
+  .timerLoad1Text,
+  .timerLoad2,
+  .timerLoad2Text,
+  .timerLoad3,
+  .timerLoad3Text {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 26em) {
+  .container {
+    margin: 0;
+    overflow-x: hidden;
+  }
+  h1 {
+    font-size: 1.2rem;
+  }
+  .timerLoad1,
+  .timerLoad1Text,
+  .timerLoad2,
+  .timerLoad2Text,
+  .timerLoad3,
+  .timerLoad3Text {
+    font-size: 0.8rem;
+  }
+}
