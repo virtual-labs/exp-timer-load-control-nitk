@@ -180,7 +180,7 @@ function drawLine() {
 }
 
 function drawArc(left, top, color, clearLeft, clearTop) {
-  ctx.clearRect(clearLeft * scaleX - 20, clearTop * scaleY - 20, 100, 50);
+  ctx.clearRect(clearLeft * scaleX - 20, clearTop * scaleY - 20, 50, 50);
   ctx.beginPath();
   ctx.fillStyle = color;
   ctx.ellipse(left * scaleX, top * scaleY, 5, 9, 0, 0, 4 * Math.PI);
