@@ -537,7 +537,8 @@ h1 {
   .timerLoad2,
   .timerLoad2Text,
   .timerLoad3,
-  .timerLoad3Text {
+  .timerLoad3Text .timerLoad4,
+  .timerLoad4Text {
     font-size: 1.2rem;
   }
 }
@@ -554,7 +555,9 @@ h1 {
   .timerLoad2,
   .timerLoad2Text,
   .timerLoad3,
-  .timerLoad3Text {
+  .timerLoad3Text,
+  .timerLoad4,
+  .timerLoad4Text {
     font-size: 0.8rem;
   }
 }
