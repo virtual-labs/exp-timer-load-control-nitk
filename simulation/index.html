@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SOLVE -SA</title>
+    <link rel="stylesheet" href="./css/plc.css" />
+    <script defer src="./js/plc.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+        <img src="./images/logo_nitk.png" alt="logo" class="logo" />
+        <h1>
+          Development of 11KV/433 volts substation automation using PLC for
+          timer ON/OFF load control
+        </h1>
+      </div>
+      <div class="sim-container">
+        <canvas id="canvas" class="canvas" width="900" height="500"></canvas>
+        <canvas id="canvas1" class="canvas" width="900" height="500"></canvas>
+        <!-- up and down switches -->
+        <img
+          src="./images/swOpen.png"
+          id="d1"
+          class="d1"
+          onclick="switchToggle(this)"
+        />
+        <img
+          src="./images/swOpen.png"
+          id="d2"
+          class="d2"
+          onclick="switchToggle(this)"
+        />
+        <img
+          src="./images/swOpen.png"
+          id="d3"
+          class="d3"
+          onclick="switchToggle(this)"
+        />
+        <img
+          src="./images/swOpen.png"
+          id="d4"
+          class="d4"
+          onclick="switchToggle(this)"
+        />
+        <img
+          src="./images/swOpen.png"
+          id="d5"
+          class="d5"
+          onclick="switchToggle(this)"
+        />
+        <img
+          src="./images/swOpen.png"
+          id="d6"
+          class="d6"
+          onclick="switchToggle(this)"
+        />
+        <img
+          src="./images/swOpen.png"
+          id="d7"
+          class="d7"
+          onclick="switchToggle(this)"
+        />
+        <img
+          src="./images/swOpen.png"
+          id="u1"
+          class="u1"
+          onclick="switchToggle(this)"
+        />
+        <img
+          src="./images/swOpen.png"
+          id="u2"
+          class="u2"
+          onclick="switchToggle(this)"
+        />
+        <img
+          src="./images/swOpen.png"
+          id="u3"
+          class="u3"
+          onclick="switchToggle(this)"
+        />
+        <img
+          src="./images/slantOpen.png"
+          id="slant"
+          class="slant"
+          onclick="switchToggle(this)"
+        />
+        <!-- Upper Part -->
+        <!-- Incomer Comments-->
+        <p
+          class="tooltipContent keb1"
+          onmouseover="toggleTip(this)"
+          onmouseout="toggleTip(this)"
+        >
+          KEB 315V, 3ph+N, 50Hz, AC Supply
+        </p>
+        <p
+          class="tooltipContent keb2"
+          onmouseover="toggleTip(this)"
+          onmouseout="toggleTip(this)"
+        >
+          KEB 315V, 3ph+N, 50Hz, AC Supply
+        </p>
+        <p
+          class="tooltipContent keb3"
+          onmouseover="toggleTip(this)"
+          onmouseout="toggleTip(this)"
+        >
+          KEB 315V, 3ph+N, 50Hz, AC Supply
+        </p>
+
+        <!-- CT1 -->
+        <p
+          class="tooltipContent uct1"
+          onmouseover="toggleTip(this)"
+          onmouseout="toggleTip(this)"
+        >
+          <span>2500/5A</span><span>CL-1,10VA</span>
+        </p>
+        <p
+          class="tooltipContent uct2"
+          onmouseover="toggleTip(this)"
+          onmouseout="toggleTip(this)"
+        >
+          <span>2500/5A</span><span>CL-1,10VA</span>
+        </p>
+        <p
+          class="tooltipContent uct3"
+          onmouseover="toggleTip(this)"
+          onmouseout="toggleTip(this)"
+        >
+          <span>2500/5A</span><span>CL-1,10VA</span>
+        </p>
+
+        <!-- MPCB -->
+        <p
+          class="tooltipContent umpcb1"
+          onmouseover="toggleTip(this)"
+          onmouseout="toggleTip(this)"
+        >
+          <span>4-6</span><span>3-A,3P</span>
+        </p>
+        <p
+          class="tooltipContent umpcb2"
+          onmouseover="toggleTip(this)"
+          onmouseout="toggleTip(this)"
+        >
+          <span>4-6</span><span>3-A,3P</span>
+        </p>
+        <p
+          class="tooltipContent umpcb3"
+          onmouseover="toggleTip(this)"
+          onmouseout="toggleTip(this)"
+        >
+          <span>4-6</span><span>3-A,3P</span>
+        </p>
+
+        <!-- PT -->
+        <p
+          class="tooltipContent upt1"
+          onmouseover="toggleTip(this)"
+          onmouseout="toggleTip(this)"
+        >
+          <span>415V/110V</span><span>3phase</span><span>30VA</span>
+        </p>
+        <p
+          class="tooltipContent upt2"
+          onmouseover="toggleTip(this)"
+          onmouseout="toggleTip(this)"
+        >
+          <span>415V/110V</span><span>3phase</span><span>30VA</span>
+        </p>
+        <p
+          class="tooltipContent upt3"
+          onmouseover="toggleTip(this)"
+          onmouseout="toggleTip(this)"
+        >
+          <span>415V/110V</span><span>3phase</span><span>30VA</span>
+        </p>
+
+        <!-- RCBO -->
+        <p
+          class="tooltipContent urcbo1"
+          onmouseover="toggleTip(this)"
+          onmouseout="toggleTip(this)"
+        >
+          <span>4P</span><span>25A</span><span>30mA</span>
+        </p>
+        <p
+          class="tooltipContent urcbo2"
+          onmouseover="toggleTip(this)"
+          onmouseout="toggleTip(this)"
+        >
+          <span>4P</span><span>25A</span><span>30mA</span>
+        </p>
+        <p
+          class="tooltipContent urcbo3"
+          onmouseover="toggleTip(this)"
+          onmouseout="toggleTip(this)"
+        >
+          <span>4P</span><span>25A</span><span>30mA</span>
+        </p>
+
+        <!-- Middle -->
+        <!-- ACB -->
+        <p
+          class="tooltipContent macb1"
+          onmouseover="toggleTip(this)"
+          onmouseout="toggleTip(this)"
+        >
+          <span>2500A, 3P</span>
+        </p>
+        <p
+          class="tooltipContent macb2"
+          onmouseover="toggleTip(this)"
+          onmouseout="toggleTip(this)"
+        >
+          <span>2500A, 4P</span>
+        </p>
+        <p
+          class="tooltipContent macb3"
+          onmouseover="toggleTip(this)"
+          onmouseout="toggleTip(this)"
+        >
+          <span>2500A, 4P</span>
+        </p>
+        <p
+          class="tooltipContent macb4"
+          onmouseover="toggleTip(this)"
+          onmouseout="toggleTip(this)"
+        >
+          <span>2500A, 4P</span>
+        </p>
+
+        <!-- DOwN -->
+        <!-- MCCB -->
+
+        <p
+          class="tooltipContent dmccb1"
+          onmouseover="toggleTip(this)"
+          onmouseout="toggleTip(this)"
+        >
+          <span>400A, 3P</span>
+        </p>
+        <p
+          class="tooltipContent dmccb2"
+          onmouseover="toggleTip(this)"
+          onmouseout="toggleTip(this)"
+        >
+          <span>400A, 3P</span>
+        </p>
+        <p
+          class="tooltipContent dmccb3"
+          onmouseover="toggleTip(this)"
+          onmouseout="toggleTip(this)"
+        >
+          <span>400A, 3P</span>
+        </p>
+        <p
+          class="tooltipContent dmccb4"
+          onmouseover="toggleTip(this)"
+          onmouseout="toggleTip(this)"
+        >
+          <span>400A, 3P</span>
+        </p>
+        <p
+          class="tooltipContent dmccb5"
+          onmouseover="toggleTip(this)"
+          onmouseout="toggleTip(this)"
+        >
+          <span>400A, 3P</span>
+        </p>
+        <p
+          class="tooltipContent dmccb6"
+          onmouseover="toggleTip(this)"
+          onmouseout="toggleTip(this)"
+        >
+          <span>400A, 3P</span>
+        </p>
+        <p
+          class="tooltipContent dmccb7"
+          onmouseover="toggleTip(this)"
+          onmouseout="toggleTip(this)"
+        >
+          <span>400A, 3P</span>
+        </p>
+
+        <!-- CT1 -->
+        <p
+          class="tooltipContent dct1"
+          onmouseover="toggleTip(this)"
+          onmouseout="toggleTip(this)"
+        >
+          <span>400/5A</span><span>CL-1,10V</span>
+        </p>
+        <p
+          class="tooltipContent dct2"
+          onmouseover="toggleTip(this)"
+          onmouseout="toggleTip(this)"
+        >
+          <span>400/5A</span><span>CL-1,10V</span>
+        </p>
+        <p
+          class="tooltipContent dct3"
+          onmouseover="toggleTip(this)"
+          onmouseout="toggleTip(this)"
+        >
+          <span>400/5A</span><span>CL-1,10V</span>
+        </p>
+        <p
+          class="tooltipContent dct4"
+          onmouseover="toggleTip(this)"
+          onmouseout="toggleTip(this)"
+        >
+          <span>400/5A</span><span>CL-1,10V</span>
+        </p>
+        <p
+          class="tooltipContent dct5"
+          onmouseover="toggleTip(this)"
+          onmouseout="toggleTip(this)"
+        >
+          <span>400/5A</span><span>CL-1,10V</span>
+        </p>
+        <p
+          class="tooltipContent dct6"
+          onmouseover="toggleTip(this)"
+          onmouseout="toggleTip(this)"
+        >
+          <span>400/5A</span><span>CL-1,10V</span>
+        </p>
+        <p
+          class="tooltipContent dct7"
+          onmouseover="toggleTip(this)"
+          onmouseout="toggleTip(this)"
+        >
+          <span>400/5A</span><span>CL-1,10V</span>
+        </p>
+        <p id="timerLoad1" class="timerLoad1"></p>
+        <p id="timerLoad1Text" class="timerLoad1Text"></p>
+        <p id="timerLoad2" class="timerLoad2"></p>
+        <p id="timerLoad2Text" class="timerLoad2Text"></p>
+        <p id="timerLoad3" class="timerLoad3"></p>
+        <p id="timerLoad3Text" class="timerLoad3Text"></p>
+        <p id="timerLoad4" class="timerLoad4"></p>
+        <p id="timerLoad4Text" class="timerLoad4Text"></p>
+      </div>
+      <p class="timer-div"></p>
+      <p class="copyright">
+        <span style="font-weight: 900; font-size: 1.4rem">&copy;&nbsp;</span>
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        SOLVE - The Virtual Lab @ NITK Surathkal
+      </p>
+    </div>
+  <script src="../assets/js/iframeResize.js"></script></body>
+</html>
